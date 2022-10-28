@@ -1,0 +1,40 @@
+.calculator {
+    width: 50vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+    border-radius: 5%
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result {
+    font-size: 48px;
+    padding: 20px 48px;
+    background-color: darkgreen;
+    color: lawngreen;
+    text-align: end;
+}
+
+button {
+    font-size: 48px;
+    padding: 20px;
+    flex-basis: 25%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.add, .subtract, .multiply, .divide {
+    background-color: red;
+    color: white;
+}
+
+.operate {
+    background-color: blue;
+    color: white;
+}
