@@ -1,7 +1,12 @@
 const result = document.querySelector('.result');
+const decimal = document.querySelector('.decimal');
 
 const numbers = document.querySelectorAll('.numbers');
 numbers.forEach((number) => number.addEventListener('click', appendResult));
+
+decimal.addEventListener('click', function() {
+    decimal.disabled = true;
+})
 
 function appendResult(event) {
     if (result.innerText == 0) {
@@ -31,6 +36,6 @@ function divide(a, b) {
 function operate(a, b, c) {
 
 }
-console.log(result.innerText);
+console.log(decimal);
 
 //make numbers append when buttons are clicked. Store number when an operator is clicked

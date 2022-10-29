@@ -5,7 +5,8 @@
     flex-direction: column;
     padding: 32px;
     gap: 32px;
-    border-radius: 5%
+    border-radius: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -13,12 +14,21 @@
     flex-wrap: wrap;
 }
 
-.result {
-    font-size: 48px;
+.resultBox {
     padding: 20px 48px;
     background-color: darkgreen;
     color: lawngreen;
     text-align: end;
+}
+
+.tempResult {
+    font-size: 32px;
+    height: 32px;
+}
+
+.result {
+    font-size: 48px;
+    margin-top: 8px;
 }
 
 button {
@@ -27,8 +37,19 @@ button {
     flex-basis: 25%;
     border-radius: 50%;
     aspect-ratio: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
 .add, .subtract, .multiply, .divide {
     background-color: red;
     color: white;
