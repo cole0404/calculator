@@ -24,6 +24,7 @@
 .tempResult {
     font-size: 32px;
     height: 32px;
+    opacity: 0.6;
 }
 
 .result {
@@ -50,12 +51,12 @@ button:hover {
 button:active {
     opacity: 0.6;
 }
-.add, .subtract, .multiply, .divide {
+.operators {
     background-color: red;
     color: white;
 }
 
-.operate {
+.equals {
     background-color: blue;
     color: white;
 }
