@@ -27,6 +27,8 @@ function appendResult(event) {
 function sendToTemp(event) {
     tempResult.textContent = result.innerText + ' ' + event.target.innerText;
     result.textContent = '0';
+    operators.forEach((operator) => operator.disabled = true);
+    equals.disabled = false;
 }
 
 function add(a, b) {
@@ -64,4 +66,6 @@ function operate() {
     else if (array1[1] == '÷') {
         result.textContent = divide(array1[0], array1[2]);
     }
+    equals.disabled = true;
+    operators.forEach((operator) => operator.disabled = false);
 }
