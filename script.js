@@ -11,9 +11,7 @@ numbers.forEach((number) => number.addEventListener('click', appendResult));
 
 equals.addEventListener('click', operate);
 
-decimal.addEventListener('click', function() {
-    decimal.disabled = true;
-})
+if (result.innerText.includes('.')) decimal.disabled = true;
 
 function appendResult(event) {
     if (result.innerText == 0) {
@@ -22,6 +20,8 @@ function appendResult(event) {
     else if (result.innerText.length < 8) {
         result.append(event.target.innerText);
     }
+
+    result.innerText.includes('.') ? decimal.disabled = true : decimal.disabled = false;
 }
 
 function sendToTemp(event) {
