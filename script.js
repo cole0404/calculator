@@ -11,8 +11,6 @@ numbers.forEach((number) => number.addEventListener('click', appendResult));
 
 equals.addEventListener('click', operate);
 
-if (result.innerText.includes('.')) decimal.disabled = true;
-
 function appendResult(event) {
     if (result.innerText == 0) {
        result.textContent = event.target.innerText;
@@ -20,7 +18,6 @@ function appendResult(event) {
     else if (result.innerText.length < 8) {
         result.append(event.target.innerText);
     }
-
     result.innerText.includes('.') ? decimal.disabled = true : decimal.disabled = false;
 }
 
@@ -29,6 +26,7 @@ function sendToTemp(event) {
     result.textContent = '0';
     operators.forEach((operator) => operator.disabled = true);
     equals.disabled = false;
+    result.innerText.includes('.') ? decimal.disabled = true : decimal.disabled = false;
 }
 
 function add(a, b) {
@@ -68,4 +66,5 @@ function operate() {
     }
     equals.disabled = true;
     operators.forEach((operator) => operator.disabled = false);
+    result.innerText.includes('.') ? decimal.disabled = true : decimal.disabled = false;
 }
